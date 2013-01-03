@@ -9,7 +9,7 @@ set :user,    "deploy"
 set :application, "blog"
 
 # use your local repository as the source
-set :repository, "git@github.com:bertoaboud/blog.git"
+set :repository, "git@github.com:bertoaboud/blog2.git"
 
 # or use a hosted repository
 #set :repository, "ssh://user@example.com/~/git/test.git"

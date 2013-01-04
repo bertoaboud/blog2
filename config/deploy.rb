@@ -45,7 +45,7 @@ namespace :deploy do
   task :update_code, :except => { :no_release => true } do
     on_rollback { run "rm -rf #{release_path}; true" }
     strategy.deploy!
-    run "echo === Rake Setup=== && cd #{latest_release} && rake db:create RAILS_ENV=production && rake db:migrate RAILS_ENV=production"
+#    run "echo === Rake Setup=== && cd #{latest_release} && rake db:create RAILS_ENV=production && rake db:migrate RAILS_ENV=production"
   end
   task :after_deploy do
 #    cleanup
@@ -92,4 +92,4 @@ namespace :deploy do
   end
 end
 
-after "deploy", "deploy:assets:precompile"
+#after "deploy", "deploy:assets:precompile"

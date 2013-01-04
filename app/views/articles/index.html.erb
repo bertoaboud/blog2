@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Body</th>
     <th>Published at</th>
     <th></th>
     <th></th>
@@ -13,7 +12,6 @@
 <% @articles.each do |article| %>
   <tr>
     <td><%= article.title %></td>
-    <td><%= article.body %></td>
     <td><%= article.published_at %></td>
     <td><%= link_to 'Show', article %></td>
     <td><%= link_to 'Edit', edit_article_path(article) %></td>

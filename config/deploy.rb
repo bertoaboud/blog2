@@ -43,3 +43,9 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
+
+namespace :after_deploy do
+  run "echo === Rake Setup=== && cd #{latest_release} && bundle exec rake db:setup RAILS_ENV=production"
+end
+
+after "deploy:restart", "after_deploy"

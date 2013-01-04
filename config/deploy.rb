@@ -1,3 +1,6 @@
+require "rvm/capistrano"
+require "bundler/capistrano"
+
 #load "deploy/assets"
 #load 'lib/deploy/assets'
 
@@ -27,9 +30,6 @@ set :keep_releases, 2
 set :git_shallow_clone, 1
 
 ssh_options[:paranoid] = false
-
-require "rvm/capistrano"
-require "bundler/capistrano"
 
 # this tells capistrano what to do when you deploy
 namespace :deploy do

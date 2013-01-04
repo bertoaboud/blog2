@@ -2,6 +2,10 @@
 
 one:
   title: MyString
+  body: MyText
+  published_at: 2013-01-04 12:39:04
 
 two:
   title: MyString
+  body: MyText
+  published_at: 2013-01-04 12:39:04

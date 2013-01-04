@@ -24,11 +24,11 @@ ssh_options[:paranoid] = false
 require "rvm/capistrano"
 require "bundler/capistrano"
 
-set :default_environment, {
-  'GEM_HOME'     => '/home/deploy/.rvm/gems/ruby-1.9.3-p327',
-  'GEM_PATH'     => '/home/deploy/.rvm/gems/ruby-1.9.3-p327',
-  'BUNDLE_PATH'  => '/home/deploy/.rvm/gems/ruby-1.9.3-p327'
-}
+ #set :default_environment, {
+ #  'GEM_HOME'     => '/home/deploy/.rvm/gems/ruby-1.9.3-p327',
+ #  'GEM_PATH'     => '/home/deploy/.rvm/gems/ruby-1.9.3-p327',
+ #  'BUNDLE_PATH'  => '/home/deploy/.rvm/gems/ruby-1.9.3-p327'
+ #}
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"

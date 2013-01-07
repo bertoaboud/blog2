@@ -34,7 +34,8 @@ namespace :deploy do
   end
 end
 
-after "deploy:create_symlink", "db:create", "db:migrate"
+#after "deploy:create_symlink", "db:create", "db:migrate"
+after "deploy:create_symlink", "db:migrate"
 
 namespace :db do
   desc "Create Production Database"
@@ -47,6 +48,12 @@ namespace :db do
   task :migrate do
     puts "\n\n=== Migrating the Production Database! ===\n\n"
     run "cd #{current_path}; rake db:migrate RAILS_ENV=production"
+  end
+
+    desc "Setup Production Database"
+  task :setup do
+    puts "\n\n=== Setuping the Production Database! ===\n\n"
+    run "cd #{current_path}; rake db:setup RAILS_ENV=production"
   end
  
   desc "Resets the Production Database"
